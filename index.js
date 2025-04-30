@@ -83,13 +83,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    const OrderNow = document.querySelector(".order-now")
+    const OrderNow = document.querySelectorAll(".order-now")
     const ModalContainer = document.querySelector(".modal-container")
     const Overlay = document.querySelector(".overlay");
+    const userInput = document.getElementById('user-input');
 
-    OrderNow.addEventListener("click", () => {
-        ModalContainer.style.display = "flex";
-        Overlay.style.display = "block";
+    OrderNow.forEach((button) => {
+        button.addEventListener("click", () => {
+            const cardDetails = button.closest('.card-details'); // Go up to the nearest .card-details
+            const title = cardDetails.querySelector('h2').textContent; // Get the <h2> text
+
+            userInput.value = title;
+            
+            console.log(title);
+            ModalContainer.style.display = "flex";
+            Overlay.style.display = "block";
+        })
     })
 
     Overlay.addEventListener("click", () => {
@@ -100,10 +109,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(() => {
         document.querySelector('.line1').classList.add('finished');
-      }, 3000); // after 3s typing line1
+      }, 2000); // after 3s typing line1
     
       setTimeout(() => {
         document.querySelector('.line2').classList.add('finished');
-      }, 7000);
+      }, 5000);
 
 });

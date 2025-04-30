@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering | FOCO</title>
+    <link rel="stylesheet" href="explore.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="#">
+                    <span class="logo-text">Waakye Palace</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-wrapper">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="cart-wrapper">
+                    <button class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">2</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="concave-container">
+            <div class="new-concave"></div>
+        </div>
+        <main>
+            <div class="content-side">
+                <div class="content-text">
+                    <h1>Order your <br><span class="highlight">favourite Package</span></h1>
+                    <p>Fresh and tasty seafood curry at amet, consectetur. 
+                        Curabitur porttitor quam pellentesque purus. 
+                        <span class="highlight">Sit amet.</span>
+                    </p>
+                    <div class="order-summary">
+                        <h3>Total order : <span class="total-price">$24.30</span></h3>
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus" id="decrease-quantity">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <span class="quantity" id="quantity">2</span>
+                            <button class="quantity-btn plus" id="increase-quantity">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <button class="buy-btn" id="buy-now">
+                            <i class="fas fa-shopping-bag"></i>
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                <img class="float" src="bellPepper.png" alt="">
+                <img class="float2" src="lettuce.png" alt="">
+                <img class="float3" src="carrots.png" alt="">
+                <div class="category-slider">
+                    <button class="slider-btn prev" id="prev-slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-container">
+                        <div class="food-category" data-price="3.25">
+                            <div class="category-image burger">
+                                <img src="https://img.icons8.com/color/96/000000/hamburger.png" alt="Burger">
+                            </div>
+                            <h4>Prince Charles</h4>
+                            <p class="price">$3.25</p>
+                        </div>
+                        <div class="food-category" data-price="2.35">
+                            <div class="category-image cake">
+                                <img src="https://img.icons8.com/color/96/000000/cake.png" alt="Cake">
+                            </div>
+                            <h4>Isha</h4>
+                            <p class="price">$2.35</p>
+                        </div>
+                        <div class="food-category active" data-price="5.35">
+                            <div class="category-image salad">
+                                <img src="https://img.icons8.com/color/96/000000/salad.png" alt="Salad">
+                            </div>
+                            <h4>Bobo</h4>
+                            <p class="price">$5.35</p>
+                        </div>
+                    </div>
+                    <button class="slider-btn next" id="next-slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <img class="overl" src="perfect.png" alt="">
+            <div class="image-side">
+                <div class="food-image">
+                    <div class="food-details">
+                        <h3>Prince Charles <span class="rating"><i class="fas fa-star"></i> 4.8</span></h3>
+                        <p class="preparation-time"><i class="far fa-clock"></i> 10-15 mins</p>
+                    </div>
+                </div>
+                
+                <div class="decoration-elements">
+                    <div class="deco-item tomato-slice"></div>
+                    <div class="deco-item chili"></div>
+                    <div class="deco-item mint-leaf"></div>
+                    <div class="deco-item lime-slice"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="explore.js"></script>
+</body>
+</html>
