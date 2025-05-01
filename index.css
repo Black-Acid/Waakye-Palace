@@ -32,12 +32,25 @@ body{
 }
 
 .labels{
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     width: 100%;
     height: 5rem;
     padding-left: 20px;
+    z-index: 500;
+    transition: background-color 0.3s ease;
+}
+
+.labels.scrolled{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.labels.scrolled .nav-links a,
+.labels.scrolled button,
+.labels.scrolled h1 {
+  color: white;
 }
 
 .labels .nav-links{

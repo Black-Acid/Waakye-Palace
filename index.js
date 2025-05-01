@@ -115,4 +115,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.line2').classList.add('finished');
       }, 5000);
 
+
+    const navbar = document.querySelector('.labels');
+
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+        console.log("we scrolled ")
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    });
+
 });
